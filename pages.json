@@ -1,6 +1,5 @@
 {
-  "pages": [
-    {
+  "pages": [{
       "path": "pages/home/home",
       "style": {}
     },
@@ -26,11 +25,10 @@
       "background": "#efeff4"
     }
   },
-  // 和 pages 平级，配置 tabBar 效果
+  // 和 pages 平级，新增 tabBar 的配置节点
   "tabBar": {
     "selectedColor": "#C00000",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "static/tab_icons/home.png",
@@ -55,5 +53,21 @@
         "selectedIconPath": "static/tab_icons/my-active.png"
       }
     ]
-  }
+  },
+  // 和 pages 节点平级的位置，声明 subPackages 节点，来定义分包相关的结构
+  "subPackages": [
+    // 一个对象就是一个分包
+    {
+      // 第一个分包的根目录
+      "root": "subpkg",
+      // 当前分包下，所有页面的相对存放路径
+      "pages": [{
+        "path": "goods_detail/goods_detail",
+        "style": {}
+      }, {
+        "path": "goods_list/goods_list",
+        "style": {}
+      }]
+    }
+  ]
 }
