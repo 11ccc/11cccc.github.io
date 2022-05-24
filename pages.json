@@ -67,6 +67,9 @@
       }, {
         "path": "goods_list/goods_list",
         "style": {}
+      }, {
+        "path": "top_SPsearch/top_SPsearch",
+        "style": {}
       }]
     }
   ]

@@ -1,5 +1,10 @@
 <template>
   <view>
+    <!-- 使用自定义组件：my-search 搜索组件 -->
+    <!-- <my-search :bgcolor="'yellowgreen'" :radius="10"></my-search> -->
+    <!-- 给自定义组件绑定点击事件，但是该自定义组件并没有提供click点击事件，所以绑定无效。 -->
+    <my-search @my-search-click="gotoMySearch"></my-search>
+    
     <view class="scroll-view-container">
       <!-- 左侧的滑动视图区域 -->
       <scroll-view class="left-scroll-view" scroll-y="true" :style="{height: wh + 'px'}">
@@ -52,7 +57,8 @@
     onLoad() {
       const sysInfo = uni.getSystemInfoSync()
       // console.log(sysInfo);
-      this.wh = sysInfo.windowHeight
+      // 可用高度 = 屏幕高度 - navigationBar高度 -tabBar高度 -自定义的search组件高度
+      this.wh = sysInfo.windowHeight - 50
 
       // 调用 获取分类列表数据的方法
       this.getCateList()
@@ -92,6 +98,13 @@
       gotoGoodsList(item3){
         uni.navigateTo({
           url:'/subpkg/goods_list/goods_list?cid=' + item3.cat_id
+        })
+      },
+      // 跳转到分包中的搜索页面
+      gotoMySearch(){
+        // console.log('ok');
+        uni.navigateTo({
+          url:'/subpkg/top_SPsearch/top_SPsearch'
         })
       }
     }

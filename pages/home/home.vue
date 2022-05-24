@@ -1,5 +1,10 @@
 <template>
   <view>
+    <!-- 使用自定义组件：my-search 搜索组件 -->
+    <view class="search-box">
+      <my-search @my-search-click="gotoSearch"></my-search>
+    </view>
+    
     <!-- 轮播图的区域 -->
     <swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
       <!-- 循环渲染轮播图的 item 项 -->
@@ -118,13 +123,21 @@
       },
 
 
-      // 所有的事件处理函数
+      // 所有的事件处理函数：
+      // nav-item 项被点击时候的事件处理函数
       navClickHandler(item) {
+        // 判断点击的是哪个 nav
         if (item.name === '分类') {
           uni.switchTab({
             url: '/pages/cate/cate'
           })
         }
+      },
+      // 点击 home 页面顶部的“搜索”，跳转到 top_SPsearch 搜索页面的事件处理函数
+      gotoSearch(){
+        uni.navigateTo({
+          url:'/subpkg/top_SPsearch/top_SPsearch'
+        })
       }
     }
   }
@@ -170,5 +183,14 @@
 
   .floor-item {
     margin: 15rpx 10rpx;
+  }
+  
+  .search-box{
+    // 设置定位效果为“吸顶”
+    position: sticky;
+    // “吸顶”的位置
+    top: 0;
+    // 提高层级，防止被轮播图覆盖
+    z-index: 999;
   }
 </style>
