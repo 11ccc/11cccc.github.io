@@ -1,6 +1,8 @@
 <template>
+  <!-- 商品详情页面 -->
+  
   <view>
-    goods_detail 商品详情页
+    goods_detail 商品详情页面
   </view>
 </template>
 

@@ -1,4 +1,6 @@
 <template>
+  <!-- 分类页面 -->
+  
   <view>
     <!-- 使用自定义组件：my-search 搜索组件 -->
     <!-- <my-search :bgcolor="'yellowgreen'" :radius="10"></my-search> -->

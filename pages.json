@@ -66,7 +66,13 @@
         "style": {}
       }, {
         "path": "goods_list/goods_list",
-        "style": {}
+        "style": {
+          // 为 subpackges 分包中的 goods_list 页面配置上拉触底的距离
+          "onReachBottomDistance": 150,
+          // 为 goods_list 页面单独开启下拉刷新效果
+          "enablePullDownRefresh": true,
+          "backgroundColor": "#F8F8F8"
+        }
       }, {
         "path": "top_SPsearch/top_SPsearch",
         "style": {}

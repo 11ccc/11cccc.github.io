@@ -1,4 +1,6 @@
 <template>
+  <!-- 购物车页面 -->
+  
   <view>
     Cart
   </view>

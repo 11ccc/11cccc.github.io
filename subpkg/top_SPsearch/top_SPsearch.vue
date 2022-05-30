@@ -1,4 +1,6 @@
 <template>
+  <!-- 搜索页面 -->
+  
   <view>
     <view class="search-box">
       <uni-search-bar :radius="100" :cancelButton="none" focus @input="input"></uni-search-bar>
