@@ -2,27 +2,10 @@
   <view>
     <view class="goods-list">
       <view v-for="(goods,i) in goodsList" :key="i" @click="gotoGoodsDetail(goods)">
-        <!-- <my-goods :gItem="goods"></my-goods> -->
+        <my-goods :goods="goods"></my-goods>
 
         <!-- 循环渲染每一个商品的 Item 项。建议在外面包裹一层 <block></block>标签，在 <block></block>标签 上面做循环操作 -->
         <!-- 在实现点击商品 item 跳转到详情页面功能时，需要把 block 组件修改为 view 组件，并绑定 click 点击事件处理函数 -->
-
-        <view class="goods-item">
-          <!-- 左侧商品图片盒子 -->
-          <view class="goods-item-left">
-            <image class="goods-pic" :src="goods.goods_small_logo || defaultPic"></image>
-          </view>
-          <!-- 右侧商品信息盒子 -->
-          <view class="goods-item-right">
-            <!-- 商品名字 -->
-            <view class="goods-name">{{goods.goods_name}}</view>
-            <!-- 商品价格 -->
-            <view class="goods-info-box">
-              <view class="goods-price">￥ {{goods.goods_price | tofixed}}</view>
-            </view>
-          </view>
-        </view>
-        </block>
       </view>
     </view>
   </view>
@@ -48,9 +31,7 @@
         goodsList: [],
         // 总数据条数，用来实现分页
         total: 0,
-        // 为了防止某些商品的图片不存在，需要在 data 中定义一个默认的图片，在页面渲染时按需使用
-        // 默认的图片
-        defaultPic: 'https://img13.360buyimg.com/n1/jfs/t1/111861/10/17615/161530/614bd888E7107432d/853539706df4cbf3.jpg',
+        
         // 定义节流阀
         // 是否正在请求数据
         // 默认值为 false，表示当前没有请求其他的数据；true表示当前正在请求数据，不应该发起额外的请求
@@ -136,36 +117,5 @@
 </script>
 
 <style lang="scss">
-  .goods-item {
-    display: flex;
-    padding: 10px 5px;
-    border-bottom: 1px solid #f0f0f0;
-
-    .goods-item-left {
-      .goods-pic {
-        width: 100px;
-        height: 100px;
-        // 为了防止图片下面有一定距离的空白间隙
-        display: block;
-        margin-right: 5px;
-      }
-    }
-
-    .goods-item-right {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      .goods-name {
-        font-size: 13px;
-      }
-
-      .goods-info-box {
-        .goods-price {
-          color: #C00000;
-          font-size: 16xp;
-        }
-      }
-    }
-  }
+  
 </style>

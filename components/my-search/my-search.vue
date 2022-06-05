@@ -37,7 +37,7 @@
       
       // 点击模拟的 input 输入框
       searchBoxHandler(){
-        console.log('okkkkk');
+        // console.log('okkkkk');
         // 通过 $emit() 触发自定义事件
         // 触发外界通过 @my-search-click 绑定的 click 事件处理函数
         this.$emit('my-search-click')
