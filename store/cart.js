@@ -10,7 +10,7 @@ export default {
     // { goods_id,goods_name,goods_price,goods_count,goods_small_logo,goods_state }
     // cart: [],
 
-    // 读取本地存储的额购物车数据，对 cart 数组进行初始化
+    // 读取本地存储的购物车数据，对 cart 数组进行初始化
     cart: JSON.parse(uni.getStorageSync('cart') || '[]')
   }),
   // ❤1-3 模块的 mutations 方法。mutations里面的方法专门用来修改 state 里面的数据
