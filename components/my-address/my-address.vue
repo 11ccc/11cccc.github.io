@@ -75,7 +75,7 @@
           this.updateAddress(succ)
         }
         
-        console.log(err);
+        // console.log(err);
       },
       // ❤3.1 把 m_user 模块中的 updateAddress 函数映射到当前组件
       ...mapMutations('m_user', ['updateAddress'])
