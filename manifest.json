@@ -91,5 +91,19 @@
         },
         "usingComponents" : true
     },
-    "vueVersion" : "2"
+    "vueVersion" : "2",
+    "h5" : {
+        "title" : "快乐优购",
+        "router" : {
+            "mode" : "history"
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
+        },
+        "sdkConfigs" : {
+            "maps" : {}
+        }
+    }
 }
