@@ -8,25 +8,6 @@
 
 为了方便编写样式（例如：`<style lang="scss"></style>`），要安装 `scss/sass 编译` 插件。
 
-## 1.3 目录结构
-
-### 1.3.1 项目页面的搭建
-
-| 页面名称 | 文件         |
-| -------- | ------------ |
-| 首页     | home         |
-| 分类     | cate         |
-| 购物车   | cart         |
-| 个人中心 | my           |
-| 商品列表 | goods_list   |
-| 商品详情 | goods_detail |
-| 地址     | my-address   |
-| 搜索     | top_SPsearch |
-| 登录     | my-login     |
-|          |              |
-|          |              |
-|          |              |
-
 
 
 # 2. tabBar 配置
